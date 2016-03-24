@@ -9,7 +9,6 @@ Console = require './console/console'
 PlotPane = require './plots/pane'
 Workspace = require './workspace/workspace'
 tree    = require './tree'
-goto    = require './gotodef'
 
 module.exports = Ink =
   activate: ->
@@ -37,4 +36,5 @@ module.exports = Ink =
     PlotPane: PlotPane
     highlights: highlights
     tree: tree
-    goto: goto
+    goto: require './gotodef'
+    InlineDoc: require './editor/docs'
